@@ -194,7 +194,6 @@ article div.main-article{
     padding: 5px;
     color: white;
     border: 1px solid #0044AA;
-    transition: background-color, 0.5s, color, 0.5s;
 }
 .register button, .login button{
     padding: 6px;
@@ -202,6 +201,7 @@ article div.main-article{
     border: none;
     font-weight: 600;
     background-color: #EAC926;
+    transition: all 500ms;
 }
 .register-form{
     padding: 20px 15px;
