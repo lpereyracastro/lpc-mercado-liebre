@@ -1,0 +1,371 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.header-text{
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+header{
+    background-color: #EAC926;
+}
+.logo{
+    width: 200px;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+header nav{
+    display: none;
+}
+header nav ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 5px 0;
+
+}
+
+header form input{
+    background-color: #FFF;
+    border: 1px;
+    font-size: 12px;
+    outline: none;
+    color: #666;
+    padding: 10px 5px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+header form button{
+    text-align: center;
+    background-color: #FFF;
+    border: 1px;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+    width: 50px;
+    border-radius: 0px 6px 6px 0px;
+}
+
+a.burger-menu{
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+}
+
+a.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 40px;
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    justify-self: end;
+    margin-right: 0px;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+main section div.products article i{
+    transition: transform 1s;
+}
+
+main section div.products article:hover i{
+    transform: rotate(-90deg);
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+.login button:hover,
+.register button:hover{
+    background-color: #0022AA;
+    padding: 5px;
+    color: white;
+    border: 1px solid #0044AA;
+    transition: background-color, 0.5s, color, 0.5s;
+}
+.register button, .login button{
+    padding: 6px;
+    border-radius: 3px;
+    border: none;
+    font-weight: 600;
+    background-color: #EAC926;
+}
+.register-form{
+    padding: 20px 15px;
+    text-align: center;
+}
+.register-form > div{
+ margin-bottom: 15px;   
+}
+.register-form > div label{
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.register-form > div > label.block{
+    display: block;
+}
+.form-input{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.login-form  > div{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+footer.footer{
+    margin-top: 75px;
+}
+.footer-article{
+    display: grid;
+    text-align: center;
+    margin: 20px 10px;
+    line-height: 20px;
+}
+.footer-icon{
+    font-size: 3rem;
+    color:#0044AA;
+    margin-bottom: 15px;
+}
+.footer-article p b{
+    font-weight: bolder;
+}
+.footer .copy{
+    margin-top: 25px;
+}
+@keyframes dropdown {
+    0% { opacity: 0%; transform: translateY(-20px);}
+    50% { transform: translateY(20px); opacity: 100%;}
+    
+}
+@media (min-width: 240px){
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    main section article{
+        transition: all 500ms ease-in-out;
+    }
+    main section article:hover .description{
+        display: block;
+        position: relative;
+        padding-bottom: 15px;
+        margin-top: 0;
+        text-align: center;
+        animation: dropdown 1s;
+    }
+    main section article div .description{
+        transition: all ease-in-out;
+    }
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+    .footer-icon{
+        transition: all 500ms ease-in-out;
+    }
+    .footer-icon:hover{
+        color: #39b54a;
+    }
+}
+
+@media (min-width: 769px){
+    .header-text{
+        margin: 0;
+        width: 200px;
+    }
+    main section div.products article{
+        width: 22%;
+    } 
+    .burger-menu{
+        display: none;
+    }
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+    }
+    .header-text{
+        max-width: 350px;
+        text-align: right;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+    }
+    header nav ul li{
+        margin: 0px 5px;
+    }
+    .footer-article p{
+        width: 100%;
+    }
+    header form input{
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+    
+    header form button{
+        font-size: 18px;
+        padding: 15px;
+        width: 50px;
+    }
+    .logo{
+        width: 250px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .top-header, nav{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .header-text{
+        font-size: 18px;
+    }
+    .logo{
+        width: 300px;
+    }
+    header form input{
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+    
+    header form button{
+        font-size: 20px;
+        padding: 15px;
+        width: 50px;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
